@@ -1,0 +1,59 @@
+MAP
+    OUTPUTFORMAT
+        NAME png24 
+        DRIVER "AGG/PNG"
+        MIMETYPE "image/png"
+        IMAGEMODE RGB 
+        EXTENSION "png"
+    END
+    
+    OUTPUTFORMAT
+        NAME jpeg  
+        DRIVER "AGG/JPEG"
+        MIMETYPE "image/jpeg"
+        IMAGEMODE RGB
+        EXTENSION "jpg"
+    END
+    
+    IMAGETYPE PNG24 
+    IMAGECOLOR  255 255 255
+
+    CONFIG "MS_ERRORFILE" stderr
+    #CONFIG "MS_ERRORFILE" /var/log/mapserver.stderr
+    EXTENT -180 -90 180 90
+
+    PROJECTION
+        "init=epsg:4326"
+    END
+
+    WEB
+        #LOG /var/log/mapserver_output.log
+        METADATA
+            "ows_title" "Mapserver test"
+            "ows_onlineresource" "http://localhost:8080?"
+            "ows_srs" "EPSG:4326"
+            "ows_enable_request"   "*"
+            "wms_srs" "EPSG:4326"
+            "wms_feature_info_mime_type" "text/html"
+            "wfs_getfeature_formatlist" "ogrgml,geojson"
+        END
+    END
+
+    MAXSIZE 4096
+
+    LAYER
+        NAME my_layer
+        TYPE RASTER
+        METADATA
+            "wms_title"             "my_layer"
+            "wms_description"       "Raster image of the current solution"
+            "wms_server_version"    "1.1.1"
+            "wms_format"            "image/jpeg"
+            "wms_transparent"       "TRUE"
+        END
+        TILEINDEX tindex.shp
+        TILEITEM "location"
+        OFFSITE 0 0 0
+        STATUS OFF
+    END
+END

@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "project_id": "1", "quadkey": "030222003222", "catalog_id": "325-chicago-test", "sol_id": "-1", "location": "\/vsis3\/flame-projects\/325-chicago\/raster_tiles\/030222003222.tif", "access_tok": "64pZXx56MnPTGzV8J5Ud5w", "project__1": null, "quadkey_2": null, "catalog__1": null, "sol_id_2": null, "location_2": null, "access_t_1": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -89.277816184199196, 40.78125 ], [ -89.208984375, 40.78125 ], [ -89.208984375, 40.707957656030125 ], [ -89.208984375, 40.693359375 ], [ -89.296875, 40.693359375 ], [ -89.296875, 40.78125 ], [ -89.277816184199196, 40.78125 ] ] ] } }
+]
+}
