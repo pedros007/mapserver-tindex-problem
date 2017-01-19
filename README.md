@@ -1,3 +1,7 @@
+This repo exists to provide sample data demonstrating a potentially confusing aspect of [Mapserver tile index](http://mapserver.org/optimization/tileindex.html).  See [Unexpected result from overlapping images in tile	index](https://lists.osgeo.org/pipermail/mapserver-users/2017-January/079694.html) for the discussion.
+
+---
+
 I want to render the following images using [this tile index](http://bl.ocks.org/d/968e0f11f1fd9b02444c3765bbb285a1) ([geojson](http://bl.ocks.org/d/968e0f11f1fd9b02444c3765bbb285a1/map.geojson)) via the `mapfile.map` with a layer: 
 
 ```
